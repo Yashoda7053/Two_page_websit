@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Collapsible Sidebar Example</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="sidebar">
+    <div id="sidebar-header">
+      <input type="text" id="search-input" placeholder="Search...">
+      <button id="add-card-btn" onclick="openModal('sidebar-modal')">Add Card</button>
+    </div>
+    <ul id="sidebar-list">
+      <!-- Sidebar cards will be dynamically populated here -->
+    </ul>
+  </div>
+
+  <div id="content-area">
+    <div id="content-header">
+      <input type="text" id="content-search-input" placeholder="Search...">
+      <button id="expand-btn" onclick="expandCard()">Expand</button>
+      <button id="add-nested-card-btn" onclick="openModal('nested-modal')">Add Nested Card</button>
+    </div>
+    <div id="nested-cards" style="display: none;">
+      <ul id="content-list">
+        <!-- Nested cards will be dynamically populated here -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="sidebar-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('sidebar-modal')">&times;</span>
+      <h2>Add Card</h2>
+      <!-- Add card form goes here -->
+    </div>
+  </div>
+
+  <div id="nested-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('nested-modal')">&times;</span>
+      <h2>Add Nested Card</h2>
+      <!-- Add nested card form goes here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

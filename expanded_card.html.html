@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expanded Card Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="content-area">
+    <div id="content-header">
+      <input type="text" id="search-input" placeholder="Search...">
+      <button id="add-card-btn" onclick="openModal('nested-modal')">Add Card</button>
+    </div>
+    <ul id="content-list">
+      <!-- Expanded cards will be dynamically populated here -->
+    </ul>
+  </div>
+
+  <!-- Modals -->
+  <div id="nested-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('nested-modal')">&times;</span>
+      <h2>Add Card</h2>
+      <!-- Add card form goes here -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
